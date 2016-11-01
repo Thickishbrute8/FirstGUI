@@ -1,5 +1,20 @@
 package graphic.controller;
 
-public class FirstGUIController {
+import graphic.view.FirstFrame;
 
+public class FirstGUIController 
+{
+
+	private FirstFrame appFrame;
+	
+	public FirstGUIController()
+	{
+		appFrame = new FirstFrame(this);
+	}
+	
+	public void start()
+	{
+		
+	}
+	
 }
