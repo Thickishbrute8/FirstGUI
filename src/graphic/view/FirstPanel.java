@@ -23,7 +23,8 @@ public class FirstPanel extends JPanel {
 		colorButton = new JButton("coloUr");
 		randomButton = new JButton("im so random");
 		baseLayout = new SpringLayout();
-
+		
+	
 		setupPanel();
 		setupLayout();
 		setupListeners();
@@ -36,15 +37,16 @@ public class FirstPanel extends JPanel {
 		this.add(randomButton);
 	}
 
-	private void setupLayout() {
-		baseLayout.putConstraint(SpringLayout.EAST, colorButton, 0,
-				SpringLayout.EAST, randomButton);
-		baseLayout.putConstraint(SpringLayout.WEST, randomButton, 0,
-				SpringLayout.WEST, this);
-		baseLayout.putConstraint(SpringLayout.SOUTH, randomButton, -140,
-				SpringLayout.SOUTH, this);
-		baseLayout.putConstraint(SpringLayout.NORTH, colorButton, 190,
-				SpringLayout.NORTH, this);
+	private void setupLayout()
+	{
+		baseLayout.putConstraint(SpringLayout.NORTH, colorButton, 0, SpringLayout.NORTH, randomButton);
+		baseLayout.putConstraint(SpringLayout.WEST, colorButton, -203, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, colorButton, 0, SpringLayout.SOUTH, randomButton);
+		baseLayout.putConstraint(SpringLayout.NORTH, randomButton, 170, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.SOUTH, randomButton, -101, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.EAST, colorButton, -83, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, randomButton, 81, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.EAST, randomButton, -249, SpringLayout.EAST, this);
 	}
 
 	private void changeBackground() {
